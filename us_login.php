@@ -35,9 +35,6 @@
             <div class="form-group">
                 <div class="password-title">
                     <label>Password</label>
-                    <a href="#" class="forgot-password">
-                        Lupa Password?
-                    </a>
                 </div>
 
                 <div class="input-box">

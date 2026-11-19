@@ -1,4 +1,3 @@
-
 <?php
 session_start();
 include "config/koneksi.php";
@@ -99,9 +98,6 @@ if (isset($_POST['submit'])) {
             <div class="form-group">
                 <div class="password-title">
                     <label>Password</label>
-                    <a href="#" class="forgot-password">
-                        Lupa Password?
-                    </a>
                 </div>
 
                 <div class="input-box">
