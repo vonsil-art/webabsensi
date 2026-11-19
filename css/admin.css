@@ -1,0 +1,339 @@
+/* =========================
+   ADMIN.CSS (UPDATED UNTUK RESPONSIVE)
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #F5FAFC;
+    color: #142433;
+}
+
+.dashboard-container {
+    min-height: 100vh;
+}
+
+/* =========================
+   SIDEBAR
+========================= */
+.sidebar {
+    width: 215px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: linear-gradient(180deg, #0A6D8C, #0B7FA3);
+    color: white;
+    padding: 20px 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    z-index: 1001; /* Z-index lebih tinggi dari overlay */
+    transition: transform 0.3s ease; /* Transisi halus untuk HP */
+}
+
+/* BRAND */
+.sidebar-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 18px;
+    margin-bottom: 22px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.sidebar-logo {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    background-color: white;
+    border-radius: 50%;
+    padding: 3px;
+}
+
+.sidebar-brand-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-brand-text h2 {
+    color: white;
+    font-size: 15px;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+.sidebar-brand-text span {
+    margin-top: 3px;
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+/* MENU */
+.sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    padding: 12px 13px;
+    border-radius: 9px;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.menu-item i {
+    width: 20px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.menu-item:hover {
+    background-color: rgba(255, 255, 255, 0.12);
+}
+
+.menu-item.active {
+    background-color: rgba(255, 255, 255, 0.18);
+}
+
+.sidebar-bottom {
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.logout-menu {
+    color: #FFE3E3;
+}
+
+/* =========================
+   MAIN CONTENT & HEADER
+========================= */
+.main-content {
+    width: calc(100% - 215px);
+    min-height: 100vh;
+    margin-left: 215px;
+    padding: 28px 32px;
+    background-color: #F5FAFC;
+    box-sizing: border-box;
+    transition: width 0.3s ease, margin-left 0.3s ease;
+}
+
+.admin-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 22px;
+}
+
+.admin-header h1 {
+    font-size: 26px;
+    color: #142433;
+    margin-bottom: 5px;
+}
+
+.admin-header p {
+    font-size: 13px;
+    color: #8494A3;
+}
+
+.today-box {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    background-color: white;
+    border: 1px solid #DCE8ED;
+    border-radius: 8px;
+    padding: 9px 13px;
+    font-size: 12px;
+    color: #53636F;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+.today-box i {
+    color: #0E97C8;
+}
+
+/* =========================
+   STATISTIC
+========================= */
+.admin-stat-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.admin-stat-card {
+    min-height: 160px;
+    background-color: white;
+    border: 1px solid #DFE9ED;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+}
+
+.stat-card-header {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+}
+
+.stat-icon {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #EAF7FB;
+    color: #0E97C8;
+    border-radius: 9px;
+}
+
+.stat-name {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-name span {
+    font-size: 13px;
+    color: #53636F;
+}
+
+.stat-number {
+    margin-top: 20px;
+    font-size: 28px;
+    font-weight: 700;
+    color: #142433;
+}
+
+/* =========================
+   CRUD ELEMENT
+========================= */
+.crud-header { margin-bottom: 14px; }
+.crud-header h2 { font-size: 22px; color: #142433; margin-bottom: 4px; }
+.crud-header p { font-size: 12px; color: #8494A3; }
+.crud-section h4 { font-size: 13px; color: #142433; margin-bottom: 8px; }
+
+/* TABLE */
+.table-wrapper {
+    width: 100%;
+    margin-top: 10px;
+    overflow-x: auto;
+    border: 1px solid #DCE6EA;
+    border-radius: 5px;
+}
+.crud-table { width: 100%; border-collapse: collapse; background-color: #FFFFFF; }
+.crud-table th, .crud-table td { padding: 10px 12px; font-size: 11px; text-align: center; }
+.crud-table th { background-color: #0E97C8; color: #FFFFFF; font-weight: 600; }
+.crud-table td { border-bottom: 1px solid #E5ECEF; color: #53636F; }
+
+/* =========================
+   BUTTON KECIL
+========================= */
+.btn-small {
+    display: inline-flex; align-items: center; justify-content: center;
+    gap: 4px; border: none; border-radius: 4px; padding: 6px 10px;
+    font-size: 10px; text-decoration: none; cursor: pointer;
+}
+.btn-add, .btn-save { background-color: #2FA967; color: white; }
+.btn-edit, .btn-back { background-color: #F0A11C; color: white; }
+.btn-delete { background-color: #E84C4C; color: white; }
+
+/* =========================
+   FORM & DLL 
+   (Tidak diubah, tetap seperti aslinya)
+========================= */
+.crud-form-card { width: 100%; padding: 12px; background-color: #FFFFFF; border: 1px solid #AEBCC4; border-radius: 5px; }
+.crud-form-group { margin-bottom: 10px; }
+.crud-form-group label { display: block; margin-bottom: 4px; font-size: 13px; font-weight: 600; color: #142433; }
+.crud-form-group input, .crud-form-group select {
+    width: 100%; height: 38px; padding: 8px 10px; border: 1px solid #AEBCC4; border-radius: 5px; font-size: 12px;
+}
+.password-input { position: relative; }
+.password-input i { position: absolute; top: 50%; right: 12px; transform: translateY(-50%); cursor: pointer; }
+
+/* MODAL HAPUS */
+.delete-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.15); display: none; align-items: center; justify-content: center; z-index: 9999; }
+.delete-modal { min-width: 190px; padding: 20px; background: #FFFFFF; border: 3px solid #0E97C8; border-radius: 14px; text-align: center; }
+
+/* FILTER & IMPOR */
+.filter-siswa-container { display: flex; align-items: end; gap: 15px; flex-wrap: wrap; margin: 15px 0; }
+.filter-siswa-item select { min-width: 180px; padding: 10px 13px; border: 1px solid #d5e0e8; border-radius: 7px; font-size: 13px; }
+.btn-reset-filter { display: inline-flex; padding: 10px 15px; border-radius: 7px; background: #64748b; color: white; font-size: 13px; cursor: pointer; border: none;}
+.impor-header { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-bottom: 20px; }
+.impor-upload { border: 2px dashed #b8cbd8; border-radius: 10px; padding: 35px 20px; text-align: center; margin-bottom: 15px; background: #f8fbfd; }
+
+/* =========================
+   PENAMBAHAN UNTUK MOBILE
+========================= */
+.sidebar-toggle {
+    display: none; /* Sembunyikan di desktop */
+    background: #0A6D8C;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+.sidebar-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+.sidebar-overlay.active { display: block; }
+
+/* RESPONSIVE MAX 900px */
+@media screen and (max-width: 900px) {
+    .admin-stat-container { grid-template-columns: 1fr; }
+    .impor-header { align-items: flex-start; flex-direction: column; }
+}
+
+/* RESPONSIVE MAX 768px (LAYAR HP) */
+@media screen and (max-width: 768px) {
+    /* Munculkan Tombol Toggle */
+    .sidebar-toggle { display: inline-block; }
+    
+    /* Sembunyikan Sidebar Default di HP */
+    .sidebar { transform: translateX(-100%); }
+    .sidebar.active { transform: translateX(0); }
+    
+    /* Main content full width */
+    .main-content {
+        width: 100%;
+        margin-left: 0;
+        padding: 20px 15px;
+    }
+
+    /* Tumpuk Header */
+    .admin-header {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .today-box { width: 100%; justify-content: center; }
+    
+    /* Form & Filter */
+    .filter-siswa-container { flex-direction: column; align-items: stretch; }
+    .filter-siswa-item select, .btn-reset-filter, .btn-import-siswa, .btn-download-template {
+        width: 100%; text-align: center; justify-content: center;
+    }
+    
+    .impor-upload input { width: 100%; }
+}

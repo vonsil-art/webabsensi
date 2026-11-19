@@ -1,0 +1,9 @@
+# Abaikan file koneksi asli di folder config (sesuaikan nama filenya)
+config/koneksi.php
+
+# Abaikan folder vendor bawaan Composer (cukup upload composer.json & composer.lock)
+vendor/
+
+# Abaikan file cache sistem Windows
+Thumbs.db
+Desktop.ini

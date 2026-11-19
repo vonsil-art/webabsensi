@@ -1,0 +1,292 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* HALAMAN LOGIN */
+.login-container {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(
+        135deg,
+        #44B2D5 0%,
+        #A7DCEB 40%,
+        #EAF7FB 70%,
+        #F7FCFD 100%
+    );
+
+    padding: 30px;
+}
+
+.login-form h1 {
+    text-align: center;
+}
+/* FORM LOGIN */
+.login-form {
+    width: 100%;
+    max-width: 420px;
+}
+
+
+/* LOGO */
+.logo-container {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+
+    margin-bottom: 30px;
+}
+
+.logo-container img {
+    width: 175px;
+    height: auto;
+}
+
+
+/* JUDUL */
+.login-form h1 {
+    font-size: 28px;
+    font-weight: 700;
+
+    color: #142433;
+
+    margin-bottom: 8px;
+}
+
+.description {
+    font-size: 13px;
+
+    color: #647A84;
+
+    line-height: 1.6;
+
+    margin-bottom: 28px;
+}
+
+
+/* FORM */
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    color: #142433;
+
+    margin-bottom: 7px;
+}
+
+
+/* PASSWORD */
+.password-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.forgot-password {
+    font-size: 11px;
+
+    color: #0E97C8;
+
+    text-decoration: none;
+
+    font-weight: 600;
+}
+
+.forgot-password:hover {
+    color: #087A9E;
+}
+
+
+/* INPUT */
+.input-box {
+    width: 100%;
+    height: 46px;
+
+    display: flex;
+    align-items: center;
+
+    background-color: #FFFFFF;
+
+    border: 1px solid #CEDDE3;
+    border-radius: 7px;
+
+    padding: 0 14px;
+}
+
+.input-box:focus-within {
+    border-color: #0E97C8;
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+
+    border: none;
+    outline: none;
+
+    background-color: transparent;
+
+    padding: 0 10px;
+
+    font-size: 13px;
+
+    color: #142433;
+}
+
+.input-box input::placeholder {
+    color: #95A5AC;
+}
+
+
+/* ICON */
+.icon-left,
+.icon-right {
+    font-size: 15px;
+
+    color: #718C98;
+}
+
+.icon-right {
+    cursor: pointer;
+}
+
+
+/* TOMBOL LOGIN */
+.btn-login {
+    width: 100%;
+    height: 46px;
+
+    margin-top: 5px;
+
+    border: none;
+    border-radius: 7px;
+
+    background-color: #0E97C8;
+
+    color: #FFFFFF;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+.btn-login:hover {
+    background-color: #087A9E;
+}
+
+
+.login-menu {
+    position: fixed;
+    top: 18px;
+    right: 22px;
+    z-index: 1000;
+}
+
+.menu-toggle {
+    width: 42px;
+    height: 42px;
+
+    border: none;
+    border-radius: 10px;
+
+    background-color: #FFFFFF;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.10);
+}
+
+.menu-toggle i {
+    font-size: 24px;
+    color: #087A9E;
+}
+
+.menu-dropdown {
+    position: absolute;
+    top: 50px;
+    right: 0;
+
+    min-width: 160px;
+
+    background-color: #FFFFFF;
+
+    border-radius: 10px;
+
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.12);
+
+    padding: 8px;
+
+    display: none;
+}
+
+.menu-dropdown.show {
+    display: block;
+}
+
+.menu-dropdown a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 10px 12px;
+
+    color: #142433;
+    text-decoration: none;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+}
+
+.menu-dropdown a:hover {
+    background-color: #EAF7FB;
+    color: #087A9E;
+}
+
+/* TAMPILAN HP */
+@media screen and (max-width: 600px) {
+
+    .login-container {
+        padding: 25px;
+    }
+
+    .login-form {
+        max-width: 100%;
+        padding: 20px;
+        background: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    }
+
+    .logo-container img {
+        width: 140px;
+    }
+
+    .login-form h1 {
+        font-size: 24px;
+    }
+
+}
