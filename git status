@@ -1,0 +1,52 @@
+[33mcommit f053d73769ae69e19bec105d3e8c385c9c97333b[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Author: vonsil-art <jackyblood12345g@gmail.com>
+Date:   Thu Nov 19 17:55:51 2026 +0700
+
+    Initial commit: source code bersih dan export database sql
+
+ .gitignore                         |    9 [32m+[m
+ admin/ad_beranda.php               |   75 [32m++[m
+ admin/ad_footer.php                |   22 [32m+[m
+ admin/ad_header.php                |   22 [32m+[m
+ admin/ad_index.php                 |   67 [32m++[m
+ admin/ad_sidebar.php               |   59 [32m++[m
+ admin/cek_sesi.php                 |   12 [32m+[m
+ admin/modGuru/dt_guru.php          |   71 [32m++[m
+ admin/modGuru/hapusGuru.php        |   24 [32m+[m
+ admin/modGuru/tambahGuru.php       |   85 [32m++[m
+ admin/modGuru/ubahGuru.php         |  109 [32m+++[m
+ admin/modKelas/dt_kelas.php        |   77 [32m++[m
+ admin/modKelas/hapusKelas.php      |   24 [32m+[m
+ admin/modKelas/tambahKelas.php     |   63 [32m++[m
+ admin/modKelas/ubahKelas.php       |   83 [32m++[m
+ admin/modSiswa/dt_siswa.php        |  194 [32m++++[m
+ admin/modSiswa/hapusSiswa.php      |   24 [32m+[m
+ admin/modSiswa/imporSiswa.php      |  266 [32m++++++[m
+ admin/modSiswa/tambahSiswa.php     |   64 [32m++[m
+ admin/modSiswa/templateSiswa.php   |   59 [32m++[m
+ admin/modSiswa/ubahSiswa.php       |   82 [32m++[m
+ composer.json                      |    5 [32m+[m
+ composer.lock                      |  503 [32m+++++++++++[m
+ config/koneksi.example.php         |   13 [32m+[m
+ css/admin.css                      |  339 [32m+++++++[m
+ css/guru.css                       | 1724 [32m++++++++++++++++++++++++++++++++++++[m
+ css/login.css                      |  292 [32m++++++[m
+ database/db_webabsensi.sql         |  276 [32m++++++[m
+ gambar/LogoDarulFatah.png          |  Bin [31m0[m -> [32m45996[m bytes
+ guru/gr_beranda.php                |  257 [32m++++++[m
+ guru/gr_footer.php                 |   23 [32m+[m
+ guru/gr_header.php                 |   31 [32m+[m
+ guru/gr_index.php                  |   51 [32m++[m
+ guru/gr_sidebar.php                |   37 [32m+[m
+ guru/logout.php                    |    8 [32m+[m
+ guru/modAbsensi/absensi.php        |  389 [32m++++++++[m
+ guru/modRekap/export_rekap.php     |  222 [32m+++++[m
+ guru/modRekap/rekap.php            |  323 [32m+++++++[m
+ guru/modRiwayat/detail_riwayat.php |  446 [32m++++++++++[m
+ guru/modRiwayat/riwayat.php        |  174 [32m++++[m
+ index.php                          |   92 [32m++[m
+ login_admin.php                    |  152 [32m++++[m
+ us_login.php                       |   76 [32m++[m
+ user/us_footer.php                 |    2 [32m+[m
+ user/us_header.php                 |   13 [32m+[m
+ 45 files changed, 6939 insertions(+)
