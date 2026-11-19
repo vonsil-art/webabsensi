@@ -68,10 +68,7 @@ if (isset($_POST['submit'])) {
 <div class="login-container">
     <div class="login-form">
         <div class="logo-container">
-            <img
-                src="gambar/LogoDarulFatah.png"
-                alt="LogoDarulFatah"
-            >
+            <img src="../gambar/LogoDarulFatah.png" alt="LogoDarulFatah">
         </div>
 
         <h1>Selamat Datang Admin</h1>
